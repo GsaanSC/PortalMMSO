@@ -1,0 +1,25 @@
+
+# BEGIN WordPress
+# Las directivas (líneas) entre "BEGIN WordPress" y "END WordPress" son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /gsaansc/portalmmso/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /gsaansc/portalmmso/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Simply Static
+# Las directivas (líneas) entre «BEGIN Simply Static» y «END Simply Static» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<Files "C:\xampp\htdocs\GsaanSC\PortalMMSO/wp-content/uploads\simply-static\3525ad822edf7406ab2a6872039d0890-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
